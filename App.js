@@ -1,12 +1,24 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { useEffect, useState } from 'react';
+import { StyleSheet, View } from 'react-native';
+import User from './Component/User/User';
 
 export default function App() {
+
+  const [user, setUser] = useState([]);
+
+  useEffect(() => {
+    fetch('https://mocki.io/v1/cbbe7459-b233-468e-ab6a-69e847e41aec?fbclid=IwAR0imui72363bIVME8bmlTM4VCHE3So0lvwt-sTGcy6jl9aWlKyl2qmZK9c')
+    .then(res => res.json())
+    .then(data => setUser(data))
+  }, [])
+
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+     
+        {
+          user.map(user => <User user={user}></User>)
+        }
+    
     </View>
   );
 }
