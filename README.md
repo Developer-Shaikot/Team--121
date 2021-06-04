@@ -7,5 +7,7 @@ Features:
 
 Packages:
 React native
+
 Expo
+
 React native bootstrap
