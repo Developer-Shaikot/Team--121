@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {StyleSheet, View, Text, Image } from 'react-native'
 import Button from "react-native-bootstrap-buttons";
 import { addTheme } from "react-native-bootstrap-buttons";
+import Devices from '../Devices/Devices';
 addTheme( "myTheme", "white", "gray", "darkcyan", "teal" );
 
 export default function User(props) {
@@ -22,7 +23,7 @@ export default function User(props) {
             <Button label="Explore" buttonType="myTheme" square  onPress={() => setShouldShow(!shouldShow)} />
                 {shouldShow ? (
                 <View style={styles.device}>
-                    <Devices user ={user}/>
+                    <Devices user ={props.user}/>
                 </View>) :null
                 }
         </View>
