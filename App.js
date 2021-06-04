@@ -1,11 +1,11 @@
 import React from 'react';
-import Header from './Component/User/Header';
+import Headers from './Component/User/Headers';
 import Home from './Component/User/Home';
 
 const App = () => {
   return (
     <div>
-      <Header></Header>
+      <Headers></Headers>
         <Home></Home>
     </div>
   );
