@@ -6,8 +6,9 @@ Features:
 3. There are a hidden section for every products. By clicking the "Explore" button, details and sample pictures will pop up underneath the explore button.
 
 Packages:
-React native
 
-Expo
+1.React native
 
-React native bootstrap
+2.Expo
+
+3.React native bootstrap
