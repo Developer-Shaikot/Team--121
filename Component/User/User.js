@@ -30,21 +30,27 @@ export default function User(props) {
 }
 const styles = StyleSheet.create({
      container: {
-      
-    paddingTop: 50,
-    paddingBottom: 50,
-    flex: 1,
-      backgroundColor: '#fff',
-      alignItems: 'center',
-      justifyContent: 'center',
-  },
-  tinyLogo: {
-    width: 200,
-    height: 200,
-  },
-  logo: {
-    width: 66,
-    height: 58,
-  },
+        paddingTop: 50,
+        paddingBottom: 50,
+        flex: 1,
+          backgroundColor: '#fff',
+          alignItems: 'center',
+          justifyContent: 'center',
+      },
+      tinyLogo: {
+        width: 200,
+        height: 200,
+      },
+      logo: {
+        width: 66,
+        height: 58,
+      },
+      device: {
+        paddingTop: 50,
+        flex: 1,
+        backgroundColor: '#fff',
+        alignItems: 'center',
+        justifyContent: 'center',
+      }
   });
   
