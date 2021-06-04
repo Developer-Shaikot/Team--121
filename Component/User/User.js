@@ -6,19 +6,25 @@ addTheme( "myTheme", "white", "gray", "darkcyan", "teal" );
 
 export default function User(props) {
     const { photo1, price} = props.user;
+  const [shouldShow, setShouldShow] = useState(false);
     return (
         
         <View style={styles.container}>
             <Text style={{paddingTop: 25,
-    paddingBottom: 25, fontSize: 25, paddingLeft: 25}}>{props.user.name}</Text>
+            paddingBottom: 25, fontSize: 25, paddingLeft: 25}}>{props.user.name}</Text>
             <Image
           source={photo1}
           resizeMode="contain"
           style={styles.tinyLogo}
         />
-        <Text style={{paddingTop: 25,
-    paddingBottom: 25, fontSize: 15}}>Price: {price} ৳</Text>
-    <Button label="Explore" buttonType="myTheme" square > </Button>
+            <Text style={{paddingTop: 25,
+            paddingBottom: 25, fontSize: 15}}>Price: {price} ৳</Text>
+            <Button label="Explore" buttonType="myTheme" square  onPress={() => setShouldShow(!shouldShow)} />
+                {shouldShow ? (
+                <View style={styles.device}>
+                    <Devices user ={user}/>
+                </View>) :null
+                }
         </View>
     )
 }
